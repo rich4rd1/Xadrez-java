@@ -27,10 +27,6 @@ public abstract class Peca {
 
     // possivelmente no futuro isso aqui quebre ao colocarmos a logica de comer peças ou de movimentos, atenção!!
     public boolean moverPara(CasaTabuleiro destino) {
-        //tirando a verificação da casaAtual
-        if (!movimentoValido(destino)) {
-            return false;
-        }
         casaAtual.desocupaCasa();
         //aqui ocorre o movimento para a casa nova
         destino.ocupaCasa(this);

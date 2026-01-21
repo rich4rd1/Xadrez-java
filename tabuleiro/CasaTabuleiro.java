@@ -4,13 +4,12 @@ import pecas.Peca;
 
 public class CasaTabuleiro {
 
-    private final String cor;
-    private char letra;
-    private int numero;
+    private String cor;
+    private final char letra;
+    private final int numero;
     private Peca peca;
 
-    public CasaTabuleiro(String cor, char letra, int numero) {
-        this.cor = cor;
+    public CasaTabuleiro(char letra, int numero) {
         this.letra = letra;
         this.numero = numero;
         this.peca = null;
@@ -20,9 +19,6 @@ public class CasaTabuleiro {
         return peca == null;
     }
 
-    public String getPosicao() {
-        return letra + "" + numero;
-    }
 
     //Ocupando o tabuleiro
     public void ocupaCasa(Peca peca) {
@@ -49,6 +45,10 @@ public class CasaTabuleiro {
 
     public String getCor() {
         return cor;
+    }
+
+    public void setCor(String cor){
+        this.cor = cor;
     }
 
     public String representacao(){

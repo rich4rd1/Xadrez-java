@@ -35,7 +35,8 @@ public final class Tabuleiro {
                 } else {
                     corCasa = (coluna % 2 == 0) ? "WHITE" : "BLACK";
                 }
-                casas[linha][coluna] = new CasaTabuleiro(corCasa, letra, numero);
+                casas[linha][coluna] = new CasaTabuleiro(letra, numero);
+                casas[linha][coluna].setCor(corCasa);
             }
         }
     }
@@ -43,7 +44,7 @@ public final class Tabuleiro {
     public CasaTabuleiro getCasa(int linha, int coluna) {
         return casas[linha][coluna];
     }
-
+    
     public void montarPartidaPadrao() {
         //peoes brancos 
         for (int coluna = 0; coluna < 8; coluna++) {
@@ -110,5 +111,6 @@ public final class Tabuleiro {
             System.out.println();
         }
     }
+
 }
 
